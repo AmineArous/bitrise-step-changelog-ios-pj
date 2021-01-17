@@ -17,9 +17,10 @@ arrayJiras.forEach(function (item, index) {
 	
 	s2 = "MOBAND-1793"
 	const request = new XMLHttpRequest();
-	request.open('GET', 'https://jira.solocal.com/rest/api/2/issue/'+s2+'?fields=status', true, 'bbm','5Ef-pS7-bPZ-wJ6')
-	request.setRequestHeader("Content-type", "application/json");
 	
+	request.open('GET', 'https://jira.solocal.com/rest/api/2/issue/'+s2+'?fields=status', true)
+	request.setRequestHeader("Content-type", "application/json");
+	request.setRequestHeader("Authorization", "Basic " + btoa("bbm:5Ef-pS7-bPZ-wJ6"))
 /*	request.onload = function() {
   if (request.readyState === 4) {
     if (request.status === 200) {
