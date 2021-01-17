@@ -34,7 +34,19 @@ arrayJiras.forEach(function (item, index) {
 	
 	const request = new XMLHttpRequest();
 	
-	var params = { "transition": { "id": "5"} }
+	var params =     {
+    "update": {
+        "comment": [{
+            "add": {
+                "body": "Comment body"
+            }
+        }]
+    },
+    "fields": {},
+    "transition": {
+        "id": "4"
+    }
+}
 	
 	request.open('POST', 'https://jira.solocal.com/rest/api/2/issue/'+s2+'/transitions?expand=transitions.fields', true)
 	request.setRequestHeader("Content-type", "application/json");
