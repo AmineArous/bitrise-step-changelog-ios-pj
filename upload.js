@@ -42,8 +42,13 @@ arrayJiras.forEach(function (item, index) {
             }
         }]
     },
+		 "fields": {
+        "resolution": {
+            "name": "IN_REVIEW"
+        }
+    },
     "transition": {
-        "id": "5"
+        "id": "12100"
     }
 }
 	
