@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-npm install xmlhttprequest
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 let commits = process.argv[2]; 
 
 console.log('commits', commits);

@@ -1,6 +1,9 @@
 #!/bin/bash
 set -ex
 THIS_SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+npm install xmlhttprequest
+
 echo "This is the value specified for the input 'example_step_input': ${example_step_input} A"
 
 echo ${BITRISE_GIT_BRANCH}
