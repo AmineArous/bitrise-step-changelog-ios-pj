@@ -2,7 +2,7 @@
 set -ex
 THIS_SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-npm install --save
+npm install xhr2 --save
 
 echo "This is the value specified for the input 'example_step_input': ${example_step_input} A"
 
