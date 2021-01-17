@@ -17,7 +17,7 @@ arrayJiras.forEach(function (item, index) {
 	
 	
 	const request = new XMLHttpRequest();
-	request.open('POST', 'https://jira.solocal.com/rest/api/2/issue/'+s2+'?fields=status', true, 'bbm','5Ef-pS7-bPZ-wJ6')
+	request.open('GET', 'https://jira.solocal.com/rest/api/2/issue/'+s2+'?fields=status', false, 'bbm','5Ef-pS7-bPZ-wJ6')
 	request.setRequestHeader("Content-type", "application/json");
 	request.onreadystatechange = function() {
 	        // D some business logics here if you receive return
