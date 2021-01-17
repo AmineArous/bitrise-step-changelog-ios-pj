@@ -77,7 +77,7 @@ inputs:
       value_options: []
 
 outputs:
-  - EXAMPLE_STEP_OUTPUT:
+  - AMINE_CHANGELOG:
     opts:
       title: "Example Step Output"
       summary: Summary. No more than 2-3 sentences.
