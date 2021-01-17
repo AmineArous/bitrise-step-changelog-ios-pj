@@ -23,6 +23,7 @@ for (var i = 0; i < arrayJiras.length; i++) {
 	   if(request.readyState === 4 && request.status === 200) {
 	       //console.log(request.responseText);
 	   }
+	   console.log('https://jira.solocal.com/rest/api/2/issue/${s2}?fields=status');
 	   console.log(request.readyState);
 	   console.log(request.status);
 	   console.log(request.responseText);
