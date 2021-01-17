@@ -17,8 +17,19 @@ arrayJiras.forEach(function (item, index) {
 	
 	
 	const request = new XMLHttpRequest();
-	request.open('GET', 'https://jira.solocal.com/rest/api/2/issue/'+s2+'?fields=status', false, 'bbm','5Ef-pS7-bPZ-wJ6')
+	request.open('GET', 'https://jira.solocal.com/rest/api/2/issue/'+s2+'?fields=status', true, 'bbm','5Ef-pS7-bPZ-wJ6')
 	request.setRequestHeader("Content-type", "application/json");
+	
+/*	request.onload = function() {
+  if (request.readyState === 4) {
+    if (request.status === 200) {
+      console.log(request.responseText);
+    } else {
+      console.error(request.statusText);
+    }
+  }
+};;*/
+	
 	request.addEventListener("load", function() {
          console.log('https://jira.solocal.com/rest/api/2/issue/'+s2+'?fields=status');
 	   console.log(request.readyState);
