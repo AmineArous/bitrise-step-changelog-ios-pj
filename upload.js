@@ -10,7 +10,7 @@ console.log(
   arrayJiras
 );
 
-array.forEach(function (item, index) {
+arrayJiras.forEach(function (item, index) {
   console.log(item, index);
 	var s2 = item.substring(1).replace(/ /g,'');
     console.log(s2);
