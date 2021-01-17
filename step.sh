@@ -1,7 +1,12 @@
 #!/bin/bash
 set -ex
 
-echo "This is the value specified for the input 'example_step_input': ${example_step_input}"
+echo "This is the value specified for the input 'example_step_input': ${example_step_input} A"
+
+echo ${BITRISE_GIT_BRANCH}
+echo "Hello World!"
+echo ${BITRISEIO_GIT_BRANCH_DEST}
+
 
 #
 # --- Export Environment Variables for other Steps:
