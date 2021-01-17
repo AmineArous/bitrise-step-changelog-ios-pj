@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-
+npm install xmlhttprequest
 let commits = process.argv[2]; 
 
 console.log('commits', commits);
@@ -15,8 +15,8 @@ for (var i = 0; i < arrayJiras.length; i++) {
     console.log(s2);
 	
 
-	
 	const request = new XMLHttpRequest();
+	request.setRequestHeader("Content-type", "application/json");
 	request.open('GET', 'https://jira.solocal.com/rest/api/2/issue/${s2}fields=status', false, 'bbm','5Ef-pS7-bPZ-wJ6')
 	request.onreadystatechange = function() {
 	        // D some business logics here if you receive return
