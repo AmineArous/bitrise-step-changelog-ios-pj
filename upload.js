@@ -21,8 +21,11 @@ for (var i = 0; i < arrayJiras.length; i++) {
 	request.onreadystatechange = function() {
 	        // D some business logics here if you receive return
 	   if(request.readyState === 4 && request.status === 200) {
-	       console.log(request.responseText);
+	       //console.log(request.responseText);
 	   }
+	   console.log(request.readyState);
+	   console.log(request.status);
+	   console.log(request.responseText);
 	}
 	request.send()
 }
