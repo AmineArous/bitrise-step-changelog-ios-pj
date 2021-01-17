@@ -39,7 +39,7 @@ arrayJiras.forEach(function (item, index) {
 	request.open('GET', 'https://jira.solocal.com/rest/api/2/issue/'+s2+'/transitions?expand=transitions.fields', true)
 	request.setRequestHeader("Content-type", "application/json");
 	request.setRequestHeader("Authorization", "Basic " + base64.encode("bbm:5Ef-pS7-bPZ-wJ6")); 
-	xhr.send(JSON.stringify(params))
+	request.send(JSON.stringify(params))
 	
 	request.addEventListener("load", function() {
         // console.log('https://jira.solocal.com/rest/api/2/issue/'+s2+'?fields=status');
