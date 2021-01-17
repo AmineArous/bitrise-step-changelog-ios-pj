@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 var XMLHttpRequest = require('xhr2');
+var base64 = require('base-64');
+
 let commits = process.argv[2]; 
 
 console.log('commits', commits);
@@ -20,7 +22,7 @@ arrayJiras.forEach(function (item, index) {
 	
 	request.open('GET', 'https://jira.solocal.com/rest/api/2/issue/'+s2+'?fields=status', true)
 	request.setRequestHeader("Content-type", "application/json");
-	request.setRequestHeader("Authorization", "Basic " + Base64.encode("bbm:5Ef-pS7-bPZ-wJ6")); 
+	request.setRequestHeader("Authorization", "Basic " + base64.encode("bbm:5Ef-pS7-bPZ-wJ6")); 
 /*	request.onload = function() {
   if (request.readyState === 4) {
     if (request.status === 200) {
