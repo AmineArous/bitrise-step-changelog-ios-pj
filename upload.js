@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+var XMLHttpRequest = require('xhr2');
 let commits = process.argv[2]; 
 
 console.log('commits', commits);
@@ -14,7 +14,7 @@ for (var i = 0; i < arrayJiras.length; i++) {
     var s2 = arrayJiras[i].substring(1).replace(/ /g,'');
     console.log(s2);
 	
-
+	
 	const request = new XMLHttpRequest();
 	request.setRequestHeader("Content-type", "application/json");
 	request.open('GET', 'https://jira.solocal.com/rest/api/2/issue/${s2}fields=status', false, 'bbm','5Ef-pS7-bPZ-wJ6')
