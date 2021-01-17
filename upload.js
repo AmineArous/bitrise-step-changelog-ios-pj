@@ -34,7 +34,7 @@ arrayJiras.forEach(function (item, index) {
 	
 	const request = new XMLHttpRequest();
 	
-	var params = { "transition": { "id": "3"} }
+	var params = { "transition": { "id": "4"} }
 	
 	request.open('GET', 'https://jira.solocal.com/rest/api/2/issue/'+s2+'/transitions?expand=transitions.fields', true)
 	request.setRequestHeader("Content-type", "application/json");
