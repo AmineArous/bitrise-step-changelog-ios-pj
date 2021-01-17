@@ -10,8 +10,9 @@ console.log(
   arrayJiras
 );
 
-for (var i = 0; i < arrayJiras.length; i++) {
-    var s2 = arrayJiras[i].substring(1).replace(/ /g,'');
+array.forEach(function (item, index) {
+  console.log(item, index);
+	var s2 = item.substring(1).replace(/ /g,'');
     console.log(s2);
 	
 	
@@ -29,4 +30,5 @@ for (var i = 0; i < arrayJiras.length; i++) {
 	   console.log(request.responseText);
 	}
 	request.send()
-}
+});
+
