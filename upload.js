@@ -19,16 +19,14 @@ arrayJiras.forEach(function (item, index) {
 	const request = new XMLHttpRequest();
 	request.open('GET', 'https://jira.solocal.com/rest/api/2/issue/'+s2+'?fields=status', false, 'bbm','5Ef-pS7-bPZ-wJ6')
 	request.setRequestHeader("Content-type", "application/json");
-	request.onreadystatechange = function() {
-	        // D some business logics here if you receive return
-	   if(request.readyState === 4 && request.status === 200) {
-	       //console.log(request.responseText);
-	   }
-	   console.log('https://jira.solocal.com/rest/api/2/issue/'+s2+'?fields=status');
+	request.addEventListener("load", function() {
+         console.log('https://jira.solocal.com/rest/api/2/issue/'+s2+'?fields=status');
 	   console.log(request.readyState);
 	   console.log(request.status);
 	   console.log(request.responseText);
-	}
+    }, false);
+	
+	
 	request.send()
 });
 
