@@ -1,6 +1,6 @@
 #!/bin/bash
 set -ex
-
+THIS_SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo "This is the value specified for the input 'example_step_input': ${example_step_input} A"
 
 echo ${BITRISE_GIT_BRANCH}
@@ -25,6 +25,8 @@ changelog="$(git log --pretty=format:"%s" $lastLMasterTag...$lastLBranchTag)"
 #echo $(changelog)
 echo "--"
 echo $changelog
+
+$THIS_SCRIPT_DIR/upload.js "${changelog}"
 
 #
 # --- Export Environment Variables for other Steps:
