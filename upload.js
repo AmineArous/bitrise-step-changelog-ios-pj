@@ -42,7 +42,6 @@ arrayJiras.forEach(function (item, index) {
             }
         }]
     },
-    "fields": {},
     "transition": {
         "id": "4"
     }
