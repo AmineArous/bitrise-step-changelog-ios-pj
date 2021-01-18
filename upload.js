@@ -5,11 +5,11 @@ var base64 = require('base-64');
 let commits = process.argv[2]; 
 
 
-var paramsss = commits.split('\n')
+var paramsss = commits.split('\n');
 return paramsss;
-console.log("-------paramsss")
-console.log(paramsss.length)
-console.log("-------")
+console.log("-------paramsss");
+console.log(paramsss.length);
+console.log("-------");
 
 
 
