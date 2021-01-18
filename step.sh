@@ -35,6 +35,15 @@ echo "--"
 echo ${#changelog[*]}
 #$THIS_SCRIPT_DIR/upload.js "${changelog}"
 
+
+
+mails=$(echo $changelog | tr "\n")
+
+for addr in $mails
+do
+    echo "> [$addr]"
+done
+
 #
 # --- Export Environment Variables for other Steps:
 # You can export Environment Variables for other Steps with
