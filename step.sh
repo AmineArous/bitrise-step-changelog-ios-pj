@@ -38,7 +38,7 @@ changelog_final=$($THIS_SCRIPT_DIR/upload.js "${changelog}")
 
 
 echo "--final changelog"
-echo $(changelog_final)
+echo $changelog_final
 echo "-------"
 
 #
