@@ -33,12 +33,13 @@ changelog="$(git log --pretty=format:"%s" $lastLMasterTag...$lastLBranchTag)"
 echo "--"
 echo $changelog
 echo "-------"
-#$THIS_SCRIPT_DIR/upload.js "${changelog}"
+changelog=$($THIS_SCRIPT_DIR/upload.js "${changelog}")
 
 
 
-readarray -t lines <<<"$changelog"
-printf ">[%s]\n" "${lines[@]}"
+echo "--final changelog"
+echo $changelog
+echo "-------"
 
 #
 # --- Export Environment Variables for other Steps:
