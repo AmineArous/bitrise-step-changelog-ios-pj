@@ -37,13 +37,8 @@ echo "-------"
 
 
 
-IFS=$'\n' 
-read -d '' -r -a array <<< "$changelog"
-
-for element in "${array[@]}"
-do
-    echo "$element"
-done
+readarray -t lines <<<"$changelog"
+printf ">[%s]\n" "${lines[@]}"
 
 #
 # --- Export Environment Variables for other Steps:
