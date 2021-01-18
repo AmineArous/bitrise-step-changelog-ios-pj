@@ -37,11 +37,10 @@ echo ${#changelog[*]}
 
 
 
-mails=$(echo $changelog | tr ";" "\n")
-
-for addr in $mails
-do
-    echo "> [$addr]"
+IFS='\n' read -ra ADDR <<< "$changelog"
+for i in "${ADDR[@]}"; do
+    # process "$i"
+    echo $i
 done
 
 #
