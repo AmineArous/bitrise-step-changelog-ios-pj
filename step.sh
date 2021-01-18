@@ -32,7 +32,7 @@ changelog="$(git log --pretty=format:"%s" $lastLMasterTag...$lastLBranchTag)"
 #echo $(changelog)
 echo "--"
 #echo $changelog.lenght
-echo ${#changelog[*]}
+#echo ${#changelog[*]}
 #$THIS_SCRIPT_DIR/upload.js "${changelog}"
 
 
