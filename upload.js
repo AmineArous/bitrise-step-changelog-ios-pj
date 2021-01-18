@@ -10,7 +10,7 @@ console.log("-------lenght")
 console.log(commits.lenght)
 console.log("-------")
 
-var paramsss = commit.split('\n')
+var paramsss = commits.split('\n')
 
 console.log("-------paramsss")
 console.log(paramsss.lenght)
