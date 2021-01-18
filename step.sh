@@ -37,7 +37,7 @@ echo ${#changelog[*]}
 
 
 
-mails=$(echo $changelog | tr "\n")
+mails=$(echo $changelog | tr ";" "\n")
 
 for addr in $mails
 do
