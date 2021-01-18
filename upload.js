@@ -4,11 +4,6 @@ var base64 = require('base-64');
 
 let commits = process.argv[2]; 
 
-console.log('commits', commits);
-
-console.log("-------length")
-console.log(commits.length)
-console.log("-------")
 
 var paramsss = commits.split('\n')
 
@@ -16,7 +11,8 @@ console.log("-------paramsss")
 console.log(paramsss.length)
 console.log("-------")
 
-return "AAA"
+return paramsss
+
 let arrayJiras = commits.match(/(#.*) /g);
 console.log(
   arrayJiras
