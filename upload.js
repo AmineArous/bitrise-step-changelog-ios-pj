@@ -7,7 +7,7 @@ let commits = process.argv[2];
 
 var paramsss = commits.split('\n');
 
-arrayJiras.forEach(function (item, index) {
+paramsss.forEach(function (item, index) {
 	console.log(item);
 });
 //console.log(paramsss);
