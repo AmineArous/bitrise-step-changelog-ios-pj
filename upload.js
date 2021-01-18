@@ -6,12 +6,12 @@ let commits = process.argv[2];
 
 
 var paramsss = commits.split('\n')
-
+return paramsss
 console.log("-------paramsss")
 console.log(paramsss.length)
 console.log("-------")
 
-return paramsss
+
 
 let arrayJiras = commits.match(/(#.*) /g);
 console.log(
