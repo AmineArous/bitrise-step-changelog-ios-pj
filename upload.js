@@ -6,7 +6,7 @@ let commits = process.argv[2];
 
 
 var paramsss = commits.split('\n')
-return paramsss
+return paramsss;
 console.log("-------paramsss")
 console.log(paramsss.length)
 console.log("-------")
