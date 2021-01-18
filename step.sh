@@ -37,10 +37,11 @@ echo ${#changelog[*]}
 
 
 
-IFS='\n' read -ra ADDR <<< "$changelog"
-for i in "${ADDR[@]}"; do
-    # process "$i"
-    echo $i
+IFS=$'\n' read -d '' -r -a array <<< "$changelog"
+
+for element in "${array[@]}"
+do
+    echo "$element"
 done
 
 #
