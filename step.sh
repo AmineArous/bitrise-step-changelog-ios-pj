@@ -11,10 +11,10 @@ echo ${BITRISE_GIT_BRANCH}
 echo "Hello World!"
 echo ${BITRISEIO_GIT_BRANCH_DEST}
 
-git checkout origin/${BITRISEIO_GIT_BRANCH_DEST}
-lastLMasterTag=$(git log --pretty=format:'%h' -n 1)
+#git checkout origin/${BITRISEIO_GIT_BRANCH_DEST}
+#lastLMasterTag=$(git log --pretty=format:'%h' -n 1)
 #echo $(lastLMasterTag)
-git checkout origin/${BITRISE_GIT_BRANCH}
+git checkout ${BITRISE_GIT_BRANCH}
 lastLBranchTag=$(git log --pretty=format:'%h' -n 1)
 #echo $(lastLBranchTag)
 
@@ -22,15 +22,18 @@ lastLBranchTag=$(git log --pretty=format:'%h' -n 1)
 #argument=$(git log --no-merges ${BITRISEIO_GIT_BRANCH_DEST}..)
 #argument=$(git log ${BITRISE_GIT_BRANCH} --not $previousTag)
 #argument=$(git log origin/master..origin/test)
-argument2=$(git cherry -v origin/master origin/test)
+#argument2=$(git cherry -v origin/master origin/test)
 
+git checkout ${BITRISEIO_GIT_BRANCH_DEST}~1
+lastLMasterTag=$(git log --pretty=format:'%h' -n 1)
+  
 changelog="$(git log --pretty=format:"%s" $lastLMasterTag...$lastLBranchTag)"
 
 #echo $(changelog)
 echo "--"
 echo $changelog
 
-$THIS_SCRIPT_DIR/upload.js "${changelog}"
+#$THIS_SCRIPT_DIR/upload.js "${changelog}"
 
 #
 # --- Export Environment Variables for other Steps:
