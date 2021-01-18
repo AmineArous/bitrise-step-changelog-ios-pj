@@ -6,7 +6,17 @@ let commits = process.argv[2];
 
 console.log('commits', commits);
 
+console.log("-------lenght")
+console.log(commits.lenght)
+console.log("-------")
 
+var paramsss = commit.split('\n')
+
+console.log("-------paramsss")
+console.log(paramsss.lenght)
+console.log("-------")
+
+return "AAA"
 let arrayJiras = commits.match(/(#.*) /g);
 console.log(
   arrayJiras
