@@ -6,14 +6,14 @@ let commits = process.argv[2];
 
 console.log('commits', commits);
 
-console.log("-------lenght")
-console.log(commits.lenght)
+console.log("-------length")
+console.log(commits.length)
 console.log("-------")
 
 var paramsss = commits.split('\n')
 
 console.log("-------paramsss")
-console.log(paramsss.lenght)
+console.log(paramsss.length)
 console.log("-------")
 
 return "AAA"
