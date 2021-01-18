@@ -31,13 +31,14 @@ changelog="$(git log --pretty=format:"%s" $lastLMasterTag...$lastLBranchTag)"
 
 #echo $(changelog)
 echo "--"
-#echo $changelog.lenght
-#echo ${#changelog[*]}
+echo $changelog
+echo "-------"
 #$THIS_SCRIPT_DIR/upload.js "${changelog}"
 
 
 
-IFS=$'\n' read -d '' -r -a array <<< "$changelog"
+IFS=$'\n' 
+read -d '' -r -a array <<< "$changelog"
 
 for element in "${array[@]}"
 do
