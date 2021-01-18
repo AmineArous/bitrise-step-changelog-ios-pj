@@ -7,8 +7,10 @@ let commits = process.argv[2];
 
 var paramsss = commits.split('\n');
 
-
-console.log(paramsss);
+arrayJiras.forEach(function (item, index) {
+	console.log(item);
+});
+//console.log(paramsss);
 return;
 
 console.log("-------paramsss");
